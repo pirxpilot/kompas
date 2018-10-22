@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Kompas demo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script type="text/javascript" src="build/index.js"></script>
+  <style type="text/css">
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      padding: 0;
+    }
+    input {
+      background-color: #eee;
+      text-align: center;
+      border: 0;
+      outline: 0;
+      padding: .3em;
+      margin: 3px;
+    }
+    .heading-form input {
+      width: 4em;
+      font-size: 36px;
+    }
+    .debug-form {
+      position: absolute;
+      bottom: 0;
+      text-align: center;
+    }
+    .debug-form input {
+      width: 6em;
+      font-size: 12px;
+    }
+    .absolute input[name="absolute"] {
+      background-color: yellow;
+    }
+  </style>
+</head>
+<body>
+  <form class='heading-form'>
+    <input name='heading' value='?' readonly>
+  </form>
+  <form class='debug-form'>
+    <label>alpha<input name='alpha' value='?' readonly></label>
+    <label>beta<input name='beta' value='?' readonly></label>
+    <label>gamma<input name='gamma' value='?' readonly></label>
+    <label>absolute<input name='absolute' value='?' readonly></label>
+    <label>webkitCompassHeading<input name='webkitCompassHeading' value='?' readnly></label>
+  </form>
+  <script type="text/javascript">
+    const kompas = require('kompas');
+    const form = document.querySelector('.heading-form');
+    const debugForm = document.querySelector('.debug-form');
+
+    kompas().watch().on('heading', heading => form.elements.heading.value = heading);
+
+
+    const DO_EVENT = 'ondeviceorientationabsolute' in window ?
+      'deviceorientationabsolute' :
+      'deviceorientation';
+
+    if (DO_EVENT === 'deviceorientationabsolute') {
+      document.body.classList.add('absolute');
+    }
+
+    window.addEventListener(DO_EVENT, function(ev) {
+      [
+        'alpha',
+        'beta',
+        'gamma',
+        'absolute',
+        'compassHeading',
+        'webkitCompassHeading'
+      ].forEach(name => debugForm.elements[name].value = ev[name]);
+    });
+  </script>
+</body>
+</html>

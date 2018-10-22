@@ -1,0 +1,15 @@
+{
+  "browserify": true,
+  "curly": true,
+  "eqeqeq": true,
+  "eqnull": true,
+  "immed": true,
+  "latedef": "nofunc",
+  "mocha" : true,
+  "newcap": true,
+  "noarg": true,
+  "sub": true,
+  "undef": true,
+  "unused": true,
+  "esversion": 6
+}

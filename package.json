@@ -1,0 +1,38 @@
+{
+  "name": "kompas",
+  "version": "0.0.0",
+  "description": "Calculates heading based on deviceorientation event.",
+  "author": {
+    "name": "Damian Krzeminski",
+    "email": "pirxpilot@furkot.com",
+    "url": "https://pirxpilot.me"
+  },
+  "repository": "pirxpilot/kompas",
+  "license": "MIT",
+  "keywords": [
+    "kompas",
+    "compass",
+    "heading",
+    "bearing",
+    "orientation",
+    "geo"
+  ],
+  "dependencies": {
+    "component-emitter": "^1.2.1"
+  },
+  "devDependencies": {
+    "browserify": "^16.2.2",
+    "jsdom": "^11.11.0",
+    "jsdom-global": "^3.0.2",
+    "jshint": "2.9.5",
+    "mocha": "^5.2.0",
+    "should": "^13.2.3"
+  },
+  "scripts": {
+    "test": "make check"
+  },
+  "files": [
+    "index.js",
+    "lib"
+  ]
+}
