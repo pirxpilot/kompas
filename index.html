@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Kompas demo</title>
+  <script type="text/javascript" src="build/index.js"></script>
+  <style type="text/css">
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      padding: 0;
+    }
+    input {
+      width: 4em;
+      background-color: #eee;
+      font-size: 36px;
+      text-align: center;
+      border: 0;
+      outline: 0;
+      padding: .3em;
+    }
+  </style>
+</head>
+<body>
+  <form>
+    <input name='heading' value='?' readonly>
+  <form>
+  <script type="text/javascript">
+    const kompas = require('kompas');
+    const form = document.querySelector('form');
+
+    kompas().watch().on('heading', heading => form.elements.heading.value = heading);
+  </script>
+</body>
+</html>
