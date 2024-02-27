@@ -23,10 +23,9 @@
   "devDependencies": {
     "@pirxpilot/jshint": "~3",
     "browserify": "^16.2.2",
-    "jsdom": "^11.11.0",
-    "jsdom-global": "^3.0.2",
-    "mocha": "^5.2.0",
-    "should": "^13.2.3"
+    "jsdom": "~24",
+    "jsdom-global": "~3",
+    "should": "~13"
   },
   "scripts": {
     "test": "make check"

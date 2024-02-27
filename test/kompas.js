@@ -1,3 +1,5 @@
+const { describe, it, beforeEach, afterEach } = require('node:test');
+
 const kompas = require('../');
 
 function dispatch(options) {
@@ -15,7 +17,7 @@ describe('kompas', function () {
     this.k.clear();
   });
 
-  it('must display heading if provided', function (done) {
+  it('must display heading if provided', function (_, done) {
     this.k.on('heading', function(heading) {
       setTimeout(function() {
         heading.should.equal(270);
@@ -25,7 +27,7 @@ describe('kompas', function () {
     dispatch({ webkitCompassHeading: 270 });
   });
 
-  it('must calculate heading if not provided', function (done) {
+  it('must calculate heading if not provided', function (_, done) {
     this.k.on('heading', function(heading) {
       setTimeout(function() {
         heading.should.be.within(-360, 360);
