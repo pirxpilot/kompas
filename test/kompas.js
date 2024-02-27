@@ -9,17 +9,17 @@ function dispatch(options) {
 }
 
 describe('kompas', function () {
-  beforeEach(function() {
+  beforeEach(function () {
     this.k = kompas().watch();
   });
 
-  afterEach(function() {
+  afterEach(function () {
     this.k.clear();
   });
 
   it('must display heading if provided', function (_, done) {
-    this.k.on('heading', function(heading) {
-      setTimeout(function() {
+    this.k.on('heading', function (heading) {
+      setTimeout(function () {
         heading.should.equal(270);
         done();
       }, 0);
@@ -28,8 +28,8 @@ describe('kompas', function () {
   });
 
   it('must calculate heading if not provided', function (_, done) {
-    this.k.on('heading', function(heading) {
-      setTimeout(function() {
+    this.k.on('heading', function (heading) {
+      setTimeout(function () {
         heading.should.be.within(-360, 360);
         done();
       }, 0);
