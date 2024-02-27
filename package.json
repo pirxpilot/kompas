@@ -18,7 +18,7 @@
     "geo"
   ],
   "dependencies": {
-    "component-emitter": "^1.2.1"
+    "component-emitter": "^1.2.1||~2"
   },
   "devDependencies": {
     "@pirxpilot/jshint": "~3",
