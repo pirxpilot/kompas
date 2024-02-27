@@ -7,7 +7,7 @@
     "email": "pirxpilot@furkot.com",
     "url": "https://pirxpilot.me"
   },
-  "repository": "pirxpilot/kompas",
+  "repository": "github:pirxpilot/kompas",
   "license": "MIT",
   "keywords": [
     "kompas",
