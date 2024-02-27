@@ -22,7 +22,7 @@
   },
   "devDependencies": {
     "@pirxpilot/jshint": "~3",
-    "browserify": "^16.2.2",
+    "esbuild": "^0.20.1",
     "jsdom": "~24",
     "jsdom-global": "~3",
     "should": "~13"

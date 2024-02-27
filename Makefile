@@ -14,10 +14,12 @@ test:
 		--require should
 
 build/index.js: $(SRC)
-	./node_modules/.bin/browserify \
-		--debug \
-		--require ./index.js:$(PROJECT) \
-		--outfile $@
+	./node_modules/.bin/esbuild \
+			--bundle \
+			--sourcemap \
+			--global-name=$(PROJECT) \
+			--outfile=$@ \
+			index.js
 
 clean:
 	rm -rf build
