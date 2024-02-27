@@ -1,7 +1,6 @@
 [![NPM version][npm-image]][npm-url]
-[![Build Status][travis-image]][travis-url]
+[![Build Status][build-image]][build-url]
 [![Dependency Status][deps-image]][deps-url]
-[![Dev Dependency Status][deps-dev-image]][deps-dev-url]
 
 # kompas
 
@@ -44,14 +43,12 @@ MIT © [Damian Krzeminski](https://pirxpilot.me)
 
 [chrome]: https://developers.google.com/web/updates/2016/03/device-orientation-changes
 
-[npm-image]: https://img.shields.io/npm/v/kompas.svg
+[npm-image]: https://img.shields.io/npm/v/kompas
 [npm-url]: https://npmjs.org/package/kompas
 
-[travis-url]: https://travis-ci.org/pirxpilot/kompas
-[travis-image]: https://img.shields.io/travis/pirxpilot/kompas.svg
+[build-url]: https://github.com/pirxpilot/kompas/actions/workflows/check.yaml
+[build-image]: https://img.shields.io/github/actions/workflow/status/pirxpilot/kompas/check.yaml?branch=main
 
-[deps-image]: https://img.shields.io/david/pirxpilot/kompas.svg
-[deps-url]: https://david-dm.org/pirxpilot/kompas
+[deps-image]: https://img.shields.io/librariesio/release/npm/kompas
+[deps-url]: https://libraries.io/npm/kompas
 
-[deps-dev-image]: https://img.shields.io/david/dev/pirxpilot/kompas.svg
-[deps-dev-url]: https://david-dm.org/pirxpilot/kompas?type=dev
