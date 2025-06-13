@@ -14,7 +14,6 @@ format:
 test:
 	node --test \
 		--require jsdom-global/register \
-		--require should \
 		$(TEST_OPTS)
 
 test-cov: TEST_OPTS := --experimental-test-coverage

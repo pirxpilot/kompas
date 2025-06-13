@@ -1,4 +1,4 @@
-const { describe, it, beforeEach, afterEach } = require('node:test');
+const test = require('node:test');
 
 const kompas = require('../');
 
@@ -8,29 +8,30 @@ function dispatch(options) {
   window.dispatchEvent(ev);
 }
 
-describe('kompas', () => {
-  beforeEach(function () {
-    this.k = kompas().watch();
+test('kompas', async t => {
+  t.beforeEach(t => {
+    t.kompas = kompas().watch();
   });
 
-  afterEach(function () {
-    this.k.clear();
+  t.afterEach(t => {
+    t.kompas.clear();
   });
 
-  it('must display heading if provided', function (_, done) {
-    this.k.on('heading', heading => {
+  await t.test('must display heading if provided', (t, done) => {
+    t.kompas.on('heading', heading => {
       setTimeout(() => {
-        heading.should.equal(270);
+        t.assert.equal(heading, 270);
         done();
       }, 0);
     });
     dispatch({ webkitCompassHeading: 270 });
   });
 
-  it('must calculate heading if not provided', function (_, done) {
-    this.k.on('heading', heading => {
+  await t.test('must calculate heading if not provided', (t, done) => {
+    t.kompas.on('heading', heading => {
       setTimeout(() => {
-        heading.should.be.within(-360, 360);
+        t.assert.ok(heading >= -360);
+        t.assert.ok(heading <= 360);
         done();
       }, 0);
     });

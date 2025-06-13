@@ -24,8 +24,7 @@
     "@biomejs/biome": "^1.9.4",
     "esbuild": "^0.20.1",
     "jsdom": "~24",
-    "jsdom-global": "~3",
-    "should": "~13"
+    "jsdom-global": "~3"
   },
   "scripts": {
     "test": "make check"
