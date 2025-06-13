@@ -1,4 +1,13 @@
 
+1.0.0 / 2025-06-12
+==================
+
+ * update dependencies
+ * transition to ESM format
+ * remove functionally empty `index.js`
+ * use `node:assert` instead of `should`
+ * use `biome` as a linter and formatter
+
 0.0.2 / 2024-02-27
 ==================
 
