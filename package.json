@@ -7,6 +7,7 @@
     "email": "pirxpilot@furkot.com",
     "url": "https://pirxpilot.me"
   },
+  "type": "module",
   "exports": "./lib/kompas.js",
   "repository": {
     "type": "git",
