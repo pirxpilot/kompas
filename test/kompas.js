@@ -3,12 +3,12 @@ const { describe, it, beforeEach, afterEach } = require('node:test');
 const kompas = require('../');
 
 function dispatch(options) {
-  let ev = new window.Event('deviceorientation');
+  const ev = new window.Event('deviceorientation');
   Object.assign(ev, options);
   window.dispatchEvent(ev);
 }
 
-describe('kompas', function () {
+describe('kompas', () => {
   beforeEach(function () {
     this.k = kompas().watch();
   });
@@ -18,8 +18,8 @@ describe('kompas', function () {
   });
 
   it('must display heading if provided', function (_, done) {
-    this.k.on('heading', function (heading) {
-      setTimeout(function () {
+    this.k.on('heading', heading => {
+      setTimeout(() => {
         heading.should.equal(270);
         done();
       }, 0);
@@ -28,8 +28,8 @@ describe('kompas', function () {
   });
 
   it('must calculate heading if not provided', function (_, done) {
-    this.k.on('heading', function (heading) {
-      setTimeout(function () {
+    this.k.on('heading', heading => {
+      setTimeout(() => {
         heading.should.be.within(-360, 360);
         done();
       }, 0);
