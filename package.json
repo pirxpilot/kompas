@@ -7,7 +7,12 @@
     "email": "pirxpilot@furkot.com",
     "url": "https://pirxpilot.me"
   },
-  "repository": "github:pirxpilot/kompas",
+  "type": "module",
+  "exports": "./lib/kompas.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pirxpilot/kompas.git"
+  },
   "license": "MIT",
   "keywords": [
     "kompas",
@@ -18,20 +23,18 @@
     "geo"
   ],
   "dependencies": {
-    "component-emitter": "^1.2.1||~2"
+    "component-emitter": "~2"
   },
   "devDependencies": {
-    "@pirxpilot/jshint": "~3",
-    "esbuild": "^0.20.1",
-    "jsdom": "~24",
-    "jsdom-global": "~3",
-    "should": "~13"
+    "@biomejs/biome": "^1.9.4",
+    "esbuild": "^0.25.5",
+    "jsdom": "~26",
+    "jsdom-global": "~3"
   },
   "scripts": {
     "test": "make check"
   },
   "files": [
-    "index.js",
     "lib"
   ]
 }
