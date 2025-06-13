@@ -7,7 +7,11 @@
     "email": "pirxpilot@furkot.com",
     "url": "https://pirxpilot.me"
   },
-  "repository": "github:pirxpilot/kompas",
+  "exports": "./lib/kompas.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pirxpilot/kompas.git"
+  },
   "license": "MIT",
   "keywords": [
     "kompas",
@@ -30,7 +34,6 @@
     "test": "make check"
   },
   "files": [
-    "index.js",
     "lib"
   ]
 }

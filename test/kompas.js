@@ -1,6 +1,6 @@
 const test = require('node:test');
 
-const kompas = require('../');
+const kompas = require('../lib/kompas');
 
 function dispatch(options) {
   const ev = new window.Event('deviceorientation');

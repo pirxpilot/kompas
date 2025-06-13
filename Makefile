@@ -1,5 +1,4 @@
 PROJECT = kompas
-SRC = index.js $(wildcard lib/*.js)
 
 all: check compile
 
@@ -21,13 +20,13 @@ test-cov: test
 
 .PHONY: check format lint test test-cov
 
-build/index.js: $(SRC)
+build/index.js: lib/kompas.js
 	./node_modules/.bin/esbuild \
 			--bundle \
 			--sourcemap \
 			--global-name=$(PROJECT) \
 			--outfile=$@ \
-			index.js
+			$^
 
 clean:
 	rm -rf build
