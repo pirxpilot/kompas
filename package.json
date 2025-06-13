@@ -23,12 +23,12 @@
     "geo"
   ],
   "dependencies": {
-    "component-emitter": "^1.2.1||~2"
+    "component-emitter": "~2"
   },
   "devDependencies": {
     "@biomejs/biome": "^1.9.4",
-    "esbuild": "^0.20.1",
-    "jsdom": "~24",
+    "esbuild": "^0.25.5",
+    "jsdom": "~26",
     "jsdom-global": "~3"
   },
   "scripts": {
